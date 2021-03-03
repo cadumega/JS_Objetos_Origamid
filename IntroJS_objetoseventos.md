@@ -35,9 +35,9 @@ Como o onclick= alert('Ola')        efeito de clicar na imagem.
 onmouseover= alert('Ola')       disparado elemento JS ao passsar o mouse
 <body onload= " alert('carregado');">         quando dispararmos um elemento, quero disparar um JS no carregamento da página
 
+<script type="text/javascript">
 function ligar() {
-    window.document.getElementbyID('xti').src= 'img/xlamp_on.png';
-
+        document.getElementbyID('xti').src= 'img/xlamp_on.png';
 }
 
 obs:
