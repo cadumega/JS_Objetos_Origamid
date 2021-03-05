@@ -149,3 +149,100 @@ swtich (tecnologia) {
  default:
   alert('tecnologia não conhecida');
 }
+
+function calcularIMC() {
+  var formulario = document.getElementById("formulario");
+  var kilos = +formulario.kilos.value;
+  var metros = +formulario.metros.value;
+  var centimetros = +formulario.centimetros.value;
+  var altura = (metros * 100 + centimetros)/100;
+  var imc = kilos / (altura * altura);
+  var resultado = +formulario.imc.value;
+
+  formulario.imc.value = imc.toFixed(2);
+  resultado = imc;
+  
+  if(resultado < 20) {
+   alert ("Abaixo do peso");
+  }
+  else if( resultado >= 20 && resultado <= 25) {
+   alert ("Peso ideal");
+  }
+  else if( resultado > 25 && resultado <= 30) {
+   alert ("Sobrepeso");
+  }
+  else if( resultado > 30 && resultado <= 35) {
+   alert ("Obesidade moderada");
+  }
+  else if( resultado  >35 && resultado <= 40) {
+   alert ("Obesidade severa");
+  }
+  else if( resultado > 40 && resultado <= 50) {
+   alert ("Obesidade mórbida");
+  }
+  else {
+    alert ("Super obesidade");
+  }
+
+}
+
+
+◘Estrutura de Loop for   - Estrutura de Repetição
+Estrutura de repetição que executa o bloco várias vezes, até que seja alcançado determinada condição.
+
+for, for/in, do, while
+
+Estrutura semelhante ao if.
+
+for(var i=0; i <3; i++) {...}
+
+Elementos: 
+Inicialização, Inicializa a variável
+Teste,  testa a variável, é verdadeira
+Ação,  executamos o bloco
+Atualização, atualiza a estrutura
+
+var texto = "";
+for(var i=10; i >0; i++)
+{
+	texto = texto + i;                 ||     texto +=i + ",";
+}
+alert (texto);
+
+#Assim que essa condição não for mais verdadeira, passa a executar o script logo após o bloco.
+#separo os elementos com vírgula "," 
+
+
+var texto = "";
+for(var i=0; i <20; i++)
+{
+	if(i%2 == 0) {
+	if(i==20)
+		texto +=i;
+	} else {
+		 texto +=i + ",";
+}
+alert (texto);
+
+#tirar a vírgula do final, ex acima.
+
+# estrutura com break, parar estrutura ou estrutura condicional
+
+
+var texto = "";
+for(var i=0; i <20; i++)
+{
+	if(i%2 == 0) {
+	if(i==20) {
+		texto +=i;
+		break; 		
+	}
+		 texto +=i + ",";
+}
+
+#cuidado com loops infinitos, XXXXXXXXX
+for (var i=0; true; i++)
+{
+	alert (i);
+}
+alert (texto);
